@@ -1,13 +1,66 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History</title>
-</head>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Music History</title>
+	  <link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
 
-<body>
+	<body>
+		<nav><ul>
+			<li><a href=""></a>View Music</li> |
+			<li><a href=""></a>Add Music</li> |
+			<li><a href=""></a>Profile</li>
+		</ul></nav>
+		<div id="content">
+		<div class="searchBox">
+		<form>
+			<label>Song Length:</label><br>
+			<input type="range" name="songLength"><br>
+			
+			<label>Artist:</label><br>
+			<select name="artistSelect">
+				<option value="Adele">Adele</option>
+				<option value="ledZeppelin">Led Zeppelin</option>
+				<option value="Borns">Borns</option>
+				<option value="Prince">Prince</option>
+				<option value="stevieWonder">Stevie Wonder</option>
+			</select><br><br>
 
+			<label>Album:</label><br>
+			<select name="albumSelect">
+				<option value="Adele">Adele</option>
+				<option value="ledZeppelin">Led Zeppelin</option>
+				<option value="Borns">Borns</option>
+				<option value="Prince">Prince</option>
+				<option value="stevieWonder">Stevie Wonder</option>
+			</select><br><br>
 
-</body>
+			<label>Genre:</label><br>
+			<input type="checkbox" name="genre1" value="Rock">Rock
+			<input type="checkbox" name="genre2" value="Classical">Classical<br>
+			<input type="checkbox" name="genre3" value="Pop">Pop
+			<input type="checkbox" name="genre4" value="Jazz">Jazz<br>
+			<input type="checkbox" name="genre5" value="Blues">Blues
+			<input type="checkbox" name="genre6" value="Hiphop">Hip Hop<br><br>
+			<input type="submit" name="Filter" value="Filter">
+		</form>
+		</div>
+
+		<div class="songInfo">
+			<h2>Song Name</h2>
+			<article>Artist name | Album name | Genre</article>
+			
+			<h2>Song Name</h2>
+			<article>Artist name | Album name | Genre</article>
+			
+			<h2>Song Name</h2>
+			<article>Artist name | Album name | Genre</article>
+
+			<h2>Song Name</h2>
+			<article>Artist name | Album name | Genre</article>
+		</div>
+		</div>
+	</body>
 </html>

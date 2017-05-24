@@ -1,0 +1,36 @@
+#content {
+	display: flex;
+}
+
+.searchBox {
+	background-color: #4DD7FA;
+	width: 20%;
+	margin: 10px;
+	border-style: solid;
+	padding: 10px;
+}
+
+.songInfo {
+	background-color: #FEFAC0;
+	border-style: solid;
+	margin-top: 10px;
+	width: 75%;
+}
+
+nav {
+	background-color: #FFB4B0;
+	border-style: solid;
+}
+
+li {
+	list-style-type: none;
+	display: inline;
+}
+
+input {
+
+}
+
+h2 {
+	color: #785616;
+}
