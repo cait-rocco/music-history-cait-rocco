@@ -8,6 +8,7 @@
 	margin: 10px;
 	border-style: solid;
 	padding: 10px;
+	margin-left: 0;
 }
 
 .songInfo {
@@ -15,6 +16,8 @@
 	border-style: solid;
 	margin-top: 10px;
 	width: 75%;
+	padding: 10px;
+	padding-top: 0;
 }
 
 nav {
@@ -27,8 +30,8 @@ li {
 	display: inline;
 }
 
-input {
-
+select {
+	position: center;
 }
 
 h2 {
