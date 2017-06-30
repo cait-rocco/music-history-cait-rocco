@@ -28,12 +28,14 @@ function arrayUpSongs (songsParse) {
 }
 
 function songsToDom (songsArr) {
+	songList.innerHTML = ""
 	for (let i = 0; i < songsArr.length; i++) {
 	// 	songsArr[i] = songsArr[i].replace(/@|\(|!/, "")
 	// songsArr[i] = songsArr[i].replace("*", "")
 	songList.innerHTML += `<div id="${i}"><h2>${songsArr[i].title}</h2><br>
 		<p>${songsArr[i].artist} | ${songsArr[i].album} | <button class="dltBtn">Delete</button> <br></div>`
 	}
+	console.log(songsArr);
 }
 
 var viewLink = document.getElementById("viewLink")
