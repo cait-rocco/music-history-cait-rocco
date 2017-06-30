@@ -1,7 +1,10 @@
-#content {
+#listMusicView {
 	display: flex;
 }
 
+.hidden {
+	display: none;
+}
 .searchBox {
 	background-color: #4DD7FA;
 	width: 20%;
@@ -18,6 +21,12 @@
 	width: 75%;
 	padding: 10px;
 	padding-top: 0;
+}
+
+#addMusicView {
+	margin: auto;
+	width: 50%;
+	padding-top: 10%;
 }
 
 nav {

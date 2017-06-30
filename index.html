@@ -1,57 +1,63 @@
 <!doctype html>
-
 <html lang="en">
 	<head>
-	  <meta charset="utf-8">
-	  <title>Music History</title>
-	  <link rel="stylesheet" type="text/css" href="styles.css">
+		<meta charset="utf-8">
+		<title>Music History</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
-
 	<body>
 		<nav><ul>
-			<li><a href=""></a>View Music</li> |
-			<li><a href=""></a>Add Music</li> |
-			<li><a href=""></a>Profile</li>
+			<li><a href="#listMusicView" id="viewLink">View Music</a></li> |
+			<li><a href="#addMusicView" id="addLink">Add Music</a></li> |
+			<li><a href="">Profile</a></li>
 		</ul></nav>
-		<div id="content">
-		<div class="searchBox">
-		<form>
-			<label>Song Length:</label><br>
-			<input type="range" name="songLength"><br>
-			
-			<label>Artist:</label><br>
-			<select name="artistSelect">
-				<option value="Adele">Adele</option>
-				<option value="ledZeppelin">Led Zeppelin</option>
-				<option value="Borns">Borns</option>
-				<option value="Prince">Prince</option>
-				<option value="stevieWonder">Stevie Wonder</option>
-			</select><br><br>
-
-			<label>Album:</label><br>
-			<select name="albumSelect">
-				<option value="Adele">Adele</option>
-				<option value="ledZeppelin">Led Zeppelin</option>
-				<option value="Borns">Borns</option>
-				<option value="Prince">Prince</option>
-				<option value="stevieWonder">Stevie Wonder</option>
-			</select><br><br>
-
-			<label>Genre:</label><br>
-			<input type="checkbox" name="genre1" value="Rock">Rock
-			<input type="checkbox" name="genre2" value="Classical">Classical<br>
-			<input type="checkbox" name="genre3" value="Pop">Pop
-			<input type="checkbox" name="genre4" value="Jazz">Jazz<br>
-			<input type="checkbox" name="genre5" value="Blues">Blues
-			<input type="checkbox" name="genre6" value="Hiphop">Hip Hop<br><br>
-			<input type="submit" name="Filter" value="Filter">
-		</form>
+		<div id="container">
+			<div id="listMusicView">
+				<div class="listView searchBox">
+					<form>
+						<label>Song Length:</label><br>
+						<input type="range" name="songLength"><br>
+						
+						<label>Artist:</label><br>
+						<select name="artistSelect">
+							<option value="Adele">Adele</option>
+							<option value="ledZeppelin">Led Zeppelin</option>
+							<option value="Borns">Borns</option>
+							<option value="Prince">Prince</option>
+							<option value="stevieWonder">Stevie Wonder</option>
+						</select><br><br>
+						<label>Album:</label><br>
+						<select name="albumSelect">
+							<option value="Adele">Adele</option>
+							<option value="ledZeppelin">Led Zeppelin</option>
+							<option value="Borns">Borns</option>
+							<option value="Prince">Prince</option>
+							<option value="stevieWonder">Stevie Wonder</option>
+						</select><br><br>
+						<label>Genre:</label><br>
+						<input type="checkbox" name="genre1" value="Rock">Rock
+						<input type="checkbox" name="genre2" value="Classical">Classical<br>
+						<input type="checkbox" name="genre3" value="Pop">Pop
+						<input type="checkbox" name="genre4" value="Jazz">Jazz<br>
+						<input type="checkbox" name="genre5" value="Blues">Blues
+						<input type="checkbox" name="genre6" value="Hiphop">Hip Hop<br><br>
+						<input type="submit" name="Filter" value="Filter">
+					</form><br>
+				</div>
+				<div class="listView songInfo">
+					<article id="songTag"></article>
+				</div>
 		</div>
-
-		<div class="songInfo">
-			<article id="songTag"></article>
+		<div id="addMusicView">
+			<label for="addSong">Add Song: </label>
+			<input type="text" name="addSong" id="addSong"><br>
+			<label for="addArtist">Add Artist: </label>
+			<input type="text" name="addArtist" id="addArtist"><br>
+			<label for="addAlbum">Add Album: </label>
+			<input type="text" name="addAlbum" id="addAlbum"><br>
+			<input type="submit" id="addBtn" value="Add">
 		</div>
-		</div>
-		<script type="text/javascript" src="main.js"></script>
-	</body>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
 </html>
