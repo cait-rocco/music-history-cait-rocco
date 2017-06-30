@@ -41,6 +41,7 @@ var addLink = document.getElementById("addLink")
 var listMusicView = document.getElementById("listMusicView")
 var addMusicView = document.getElementById("addMusicView")
 window.addEventListener("load", addMusicView.style.display = 'none')
+
 function listToggle() {
 	if (listMusicView.style.display === 'none') {
         listMusicView.style.display = 'flex';
@@ -48,12 +49,9 @@ function listToggle() {
     } else {
         listMusicView.style.display = 'none';
     }
- 	// listMusicView.classList.toggle('hidden')
 }
 
 function addToggle() {
-	// addMusicView.classList.toggle('hidden')
-	// listMusicView.classList.toggle('hidden')
 	if (addMusicView.style.display === 'none') {
         addMusicView.style.display = 'block';
         listMusicView.style.display = 'none'
