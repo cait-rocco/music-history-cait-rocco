@@ -19,22 +19,22 @@ function songRequestLoad() {
 	arrayUpSongs(songsParse);
 }
 
-// for (var i = 0; i < songs.length; i++) {
-// 	songs[i] = songs[i].replace(/@|\(|!/, "")
-// 	songs[i] = songs[i].replace("*", "")
-// }
-
 function arrayUpSongs (songsParse) {
-		songsParse.forEach(function(song) {
-			let songObj = {"title": song.title, "artist": song.artist, "album": song.album}
-			songsArr.push(songObj);
-			songList.innerHTML += `${song.title} by ${song.artist} on the album ${song.album} <button id="dltBtn">Delete</button> <br>`
-		});
-		console.log("songObj", songsArr);
-		document.getElementById("dltBtn").addEventListener("click", function(){
-		songList.innerHTML = ""
-		});
+	songsParse.forEach(function(song) {
+		let songObj = {"title": song.title, "artist": song.artist, "album": song.album}
+		songsArr.push(songObj);
+	});
+		songsToDom(songsArr);
+}
+
+function songsToDom (songsArr) {
+	for (let i = 0; i < songsArr.length; i++) {
+	// 	songsArr[i] = songsArr[i].replace(/@|\(|!/, "")
+	// songsArr[i] = songsArr[i].replace("*", "")
+	songList.innerHTML += `<div id="${i}"><h2>${songsArr[i].title}</h2><br>
+		<p>${songsArr[i].artist} | ${songsArr[i].album} | <button class="dltBtn">Delete</button> <br></div>`
 	}
+}
 
 var viewLink = document.getElementById("viewLink")
 var addLink = document.getElementById("addLink")
@@ -63,7 +63,8 @@ function addToggle() {
 function addToArray() {
 	let userNewSong = {"title": addSong.value, "artist": addArtist.value, "album": addAlbum.value}
 	songsArr.push(userNewSong);
-	songList.innerHTML += `${addSong.value} by ${addArtist.value} on the album ${addAlbum.value} <button id="dltBtn">Delete</button> <br>`
+	songList.innerHTML += `<div id="songsArr.length"><h2>${songsArr.title}</h2><br>
+		<p>${songsArr.artist} | ${songsArr.album} | <button class="dltBtn">Delete</button> <br></div>`
 		console.log(songsArr);
 };
 
@@ -78,3 +79,23 @@ addLink.addEventListener("click", function() {
 addBtn.addEventListener("click", function(){
 	addToArray();
 });
+
+function deleteSong (id) {
+	let currentSong = document.getElementById(id);
+	console.log(currentSong);
+	currentSong.remove();
+	songsArr.splice(id, 1)
+}
+
+window.addEventListener("click", function() {
+	if (event.target.classList.contains("dltBtn")) {
+		let parentID = event.target.parentNode.parentNode.getAttribute("id");
+		deleteSong(parentID);
+	}
+})
+
+let moreBtn = document.getElementById("moreBtn")
+
+function showMore () {
+
+}
