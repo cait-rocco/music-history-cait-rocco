@@ -1,4 +1,4 @@
-window.addEventListener("load", retrieveSongs);
+window.addEventListener("load", retrieveSongs("songs.json"));
 
 let addSong = document.getElementById("addSong")
 let addArtist = document.getElementById("addArtist")
@@ -7,10 +7,10 @@ let addBtn = document.getElementById("addBtn")
 let songList = document.getElementById("songTag");
 let songsArr = []
 
-function retrieveSongs () {
+function retrieveSongs (whichFile) {
 		let songRequest = new XMLHttpRequest();
 		songRequest.addEventListener("load", songRequestLoad);
-		songRequest.open("GET", "songs.json");
+		songRequest.open("GET", whichFile);
 		songRequest.send();
 	};
 
@@ -96,6 +96,6 @@ window.addEventListener("click", function() {
 
 let moreBtn = document.getElementById("moreBtn")
 
-function showMore () {
-
-}
+moreBtn.addEventListener("click", function(){
+	retrieveSongs("more.json")
+})
